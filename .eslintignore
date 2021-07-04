@@ -1,0 +1,6 @@
+**/*.gen.*
+**/dist/**
+app/ios
+app/android
+**/*.md*
+web

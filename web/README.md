@@ -31,15 +31,15 @@ You cannot sign in to Auralous directly from the development app. See [#17](http
 
 ### Workflows
 
-Upon cloning this repository, run `npm i` to install required dependencies.
+Upon cloning this repository, run `-- ` to install required dependencies.
 
-#### `npm run dev`
+#### `yarn dev`
 
-Run `npm run dev` to start the app in development mode. This enables hot-code reloading and error reporting. See [`next dev`](https://nextjs.org/docs/api-reference/cli#development).
+Run `yarn dev` to start the app in development mode. This enables hot-code reloading and error reporting. See [`next dev`](https://nextjs.org/docs/api-reference/cli#development).
 
-#### `npm run build`
+#### `yarn build`
 
-Running `npm run build` will create an optimized production build of your application. To also analyzing build size set the env variable `ANALYZE=true`.
+Running `yarn build` will create an optimized production build of your application. To also analyzing build size set the env variable `ANALYZE=true`.
 
 ## License
 

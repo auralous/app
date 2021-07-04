@@ -1,0 +1,38 @@
+{
+  "name": "@auralous/ui",
+  "version": "0.0.0",
+  "description": "Shared UI for Auralous",
+  "scripts": {
+    "build:dts": "tsc",
+    "build:babel": "babel src -d dist --extensions \".ts,.tsx\" --copy-files",
+    "build": "yarn build:dts && yarn build:babel",
+    "build:watch": "concurrently \"yarn build:dts --watch\" \"yarn build:babel -w\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/auralous/auralous.git",
+    "directory": "ui"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/auralous/auralous/issues"
+  },
+  "homepage": "https://github.com/auralous/auralous#readme",
+  "dependencies": {
+    "@auralous/api": "^0.0.0",
+    "@auralous/player": "^0.0.0"
+  },
+  "peerDependencies": {
+    "@fluentui/react-context-selector": "*",
+    "react": "*",
+    "react-hook-form": "*",
+    "react-i18next": "*",
+    "react-native": "*",
+    "react-native-gesture-handler": "*",
+    "react-native-reanimated": "*",
+    "react-native-svg": "*"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "home": {
+    "title": "Nhạc",
+    "featured_playlists": {
+      "title": "Playlist nổi bật"
+    },
+    "friends_playlists": {
+      "title": "Trong vòng kết nối",
+      "description": "Khám phá âm nhạc từ bạn bè của bạn"
+    },
+    "recent_stories": {
+      "title": "Story gần đây",
+      "description": "Nghe nhạc cùng nhau khắp mọi nơi"
+    },
+    "radio_stations": {
+      "title": "Đài phát thanh",
+      "description": "Âm nhạc biên soạn bởi người nghe nhạc như bạn"
+    }
+  },
+  "map": {
+    "title": "Bản đồ"
+  },
+  "new": {
+    "title": "Tạo Story",
+    "select_songs": {
+      "title": "Chọn bài hát",
+      "songs": "Bài hát",
+      "playlists": "Playlist",
+      "num_selected": "{{count}} bài hát được chọn",
+      "search_placeholder": "Nhập từ khóa hoặc URL để tìm kiếm",
+      "finish_add": "Hoàn tất thêm nhạc"
+    },
+    "quick_share": {
+      "title": "Chia sẻ nhanh"
+    },
+    "final": {
+      "title": "Chuẩn bị lên sóng",
+      "subtitle": "Tụ tập bàn bè và nghe nhạc bên nhau nào."
+    }
+  },
+  "user": {
+    "follow": "Theo dõi",
+    "unfollow": "Bỏ theo dõi",
+    "followers": "Người theo dõi",
+    "following": "Đang theo dõi"
+  },
+  "playlist": {
+    "title": "Playlist",
+    "my_playlists": "Playlist của bạn",
+    "x_song": "{{count}} bài hát",
+    "x_song_plural": "{{count}} bài hát"
+  },
+  "story": {
+    "title": "Story",
+    "join_live": "Tham gia"
+  },
+  "player": {
+    "title": "Trình phát",
+    "pause": "Tạm dừng",
+    "play": "Phát nhạc",
+    "skip_forward": "Bỏ qua bài",
+    "skip_backward": "Phát bài trước",
+    "no_playing": "Đang không phát nhạc",
+    "shuffle_play": "Phát ngẫu nhiên",
+    "playing_from": "Phát nhạc từ $t({{entity}}.title)"
+  },
+  "queue": {
+    "title": "Hàng chờ",
+    "up_next": "Tiếp theo",
+    "add_songs": "Thêm nhạc",
+    "remove": "Xóa",
+    "play_next": "Phát tiếp theo",
+    "move_to_top": "Chuyên lên đầu"
+  },
+  "now_playing": {
+    "title": "Đang phát"
+  },
+  "music": {
+    "title": "Nhạc"
+  },
+  "chat": {
+    "title": "Chat",
+    "input_label": "Nhập tin nhắn",
+    "play": "{{username}} phát bài hát",
+    "join": "{{username}} đã tham gia"
+  },
+  "sign_in": {
+    "title": "Đăng nhập",
+    "continue_with": "Tiếp tục với {{name}}",
+    "listen_on": "Nghe nhạc trên {{name}}"
+  },
+  "legal": {
+    "accept_continue_text": "Khi tiếp tục, bạn đồng ý với <0>Chính sách riêng tư của chúng mình</0>, <1>Điều khoản sử dụng của YouTube</1> và/hoặc <2> Chính sách riêng tư của Spotify</2> ở nơi áp dụng."
+  },
+  "not_found": {
+    "title": "Không tìm thấy",
+    "description": "Bạn thoáng nghe tiếng nhạc bên tai nhưng không thấy gì ở trước mắt."
+  },
+  "music_platform": {
+    "youtube": {
+      "name": "YouTube"
+    },
+    "spotify": {
+      "name": "Spotify"
+    }
+  },
+  "common": {
+    "status": {
+      "live": "trực tiếp"
+    },
+    "time": {
+      "ago": "{{time}} trước",
+      "just_now": "bây giờ"
+    },
+    "navigation": {
+      "go_back": "Trở về"
+    },
+    "label": {
+      "search": "Tìm kiếm"
+    },
+    "result": {
+      "search_empty": "Không tìm thấy kết quả. Thử lại nào!"
+    },
+    "input": {
+      "max_x_characters": "Tối đa {{max}} kí tự"
+    },
+    "action": {
+      "cancel": "Hủy bỏ",
+      "confirm": "Xác nhận"
+    }
+  }
+}

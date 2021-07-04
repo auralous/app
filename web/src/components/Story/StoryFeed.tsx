@@ -3,7 +3,7 @@ import { useModal } from "components/Modal";
 import { Spacer } from "components/Spacer";
 import { Typography } from "components/Typography";
 import { Box } from "components/View";
-import { Story, useStoriesQuery, useUserQuery } from "gql/gql.gen";
+import { Story, useStoriesQuery } from "gql/gql.gen";
 import { useInView } from "hooks/useInView";
 import { useMeLiveStory } from "hooks/user";
 import { t as i18nT, useI18n } from "i18n/index";
@@ -21,17 +21,13 @@ const StoryItem: React.FC<{ story: Story; onClick(): void }> = ({
 }) => {
   const { t } = useI18n();
 
-  const [{ data: { user } = { user: undefined } }] = useUserQuery({
-    variables: { id: story.creatorId },
-  });
-
   const dateStr = useMemo(() => {
     const d = Date.now() - story.createdAt.getTime();
     return d ? formatMs(d) : "";
   }, [story]);
 
   const altText = `${t("story.ofUsername", {
-    username: user?.username || "",
+    username: story.creator.username || "",
   })} - ${story.text}`;
 
   return (
@@ -73,7 +69,7 @@ const StoryItem: React.FC<{ story: Story; onClick(): void }> = ({
             </Typography.Text>
           )}
           <Spacer size={1} axis="horizontal" />
-          <Typography.Text>{user?.username}</Typography.Text>
+          <Typography.Text>{story.creator.username}</Typography.Text>
         </Typography.Paragraph>
       </Box>
     </button>

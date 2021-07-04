@@ -13,7 +13,6 @@ import {
   useMessageAddMutation,
   useMessagesQuery,
   useTrackQuery,
-  useUserQuery,
 } from "gql/gql.gen";
 import { useMe } from "hooks/user";
 import { t, useI18n } from "i18n/index";
@@ -50,13 +49,11 @@ const MessageItemSpecial: React.FC<{
 const MessageItemJoin: React.FC<{
   message: Message;
 }> = ({ message }) => {
-  const [{ data: { user } = { user: undefined } }] = useUserQuery({
-    variables: { id: message.creatorId },
-  });
-
   return (
     <MessageItemSpecial
-      text={t("message.join.text", { username: user?.username || "" })}
+      text={t("message.join.text", {
+        username: message.creator.username,
+      })}
       Icon={SvgEnter}
       createdAt={message.createdAt}
     />
@@ -66,9 +63,6 @@ const MessageItemJoin: React.FC<{
 const MessageItemPlay: React.FC<{
   message: Message;
 }> = ({ message }) => {
-  const [{ data: { user } = { user: undefined } }] = useUserQuery({
-    variables: { id: message.creatorId },
-  });
   const [{ data: { track } = { track: undefined } }] = useTrackQuery({
     variables: { id: message.text || "" },
     pause: !message.text,
@@ -77,7 +71,9 @@ const MessageItemPlay: React.FC<{
   return (
     <Box alignItems="start">
       <MessageItemSpecial
-        text={<>{t("message.play.text", { username: user?.username || "" })}</>}
+        text={
+          <>{t("message.play.text", { username: message.creator.username })}</>
+        }
         Icon={SvgMusic}
         createdAt={message.createdAt}
       />
@@ -109,27 +105,23 @@ const MessageItem: React.FC<{
   const me = useMe();
   const isCurrentUser = me?.user.id === message.creatorId;
 
-  const [{ data: { user: sender } = { user: undefined } }] = useUserQuery({
-    variables: { id: message.creatorId },
-  });
-
   return (
     <div role="listitem" className="relative w-full pl-10 pr-8">
       {!isGrouped && (
         <>
           <img
             className="absolute top-1 left-1 w-8 h-8 rounded-full object-cover"
-            src={sender?.profilePicture}
-            alt={sender?.username}
-          />{" "}
+            src={message.creator.profilePicture}
+            alt={message.creator.username}
+          />
           <Box row alignItems="center" gap="xs">
-            <Link href={`/user/${sender?.username}`}>
+            <Link href={`/user/${message.creator.username}`}>
               <Typography.Link
                 size="sm"
                 strong
                 color={isCurrentUser ? "primary" : "foreground-secondary"}
               >
-                {sender?.username}
+                {message.creator.username}
               </Typography.Link>
             </Link>
             <Typography.Text color="foreground-tertiary">

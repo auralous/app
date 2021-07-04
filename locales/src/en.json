@@ -1,0 +1,132 @@
+{
+  "home": {
+    "title": "Home",
+    "featured_playlists": {
+      "title": "Featured Playlists"
+    },
+    "friends_playlists": {
+      "title": "In Your Circle",
+      "description": "Discover what your friends are jamming to"
+    },
+    "recent_stories": {
+      "title": "Recent Stories",
+      "description": "Listen together from all around the world"
+    },
+    "radio_stations": {
+      "title": "Radio Stations",
+      "description": "Music curated by listeners like you"
+    }
+  },
+  "map": {
+    "title": "Map"
+  },
+  "new": {
+    "title": "New Story",
+    "select_songs": {
+      "title": "Select Songs",
+      "songs": "Songs",
+      "playlists": "Playlists",
+      "num_selected": "{{count}} songs selected",
+      "search_placeholder": "Enter keywords or a URL to look up",
+      "finish_add": "Finished Adding Songs"
+    },
+    "quick_share": {
+      "title": "Quick Share"
+    },
+    "final": {
+      "title": "Ready. Set. Listen.",
+      "subtitle": "Get your friends together. The show is about to start."
+    }
+  },
+  "user": {
+    "follow": "Follow",
+    "unfollow": "Unfollow",
+    "followers": "Followers",
+    "following": "Following"
+  },
+  "playlist": {
+    "title": "Playlist",
+    "my_playlists": "My Playlists",
+    "x_song": "{{count}} song",
+    "x_song_plural": "{{count}} songs"
+  },
+  "story": {
+    "title": "Story",
+    "join_live": "Join LIVE"
+  },
+  "player": {
+    "title": "Player",
+    "pause": "Pause",
+    "play": "Play",
+    "skip_forward": "Skip forward",
+    "skip_backward": "Skip backward",
+    "no_playing": "Nothing is playing",
+    "shuffle_play": "Shuffle Play",
+    "playing_from": "Playing from $t({{entity}}.title)"
+  },
+  "queue": {
+    "title": "Queue",
+    "up_next": "Up next",
+    "add_songs": "Add songs",
+    "remove": "Remove",
+    "play_next": "Play Next",
+    "move_to_top": "Move to top"
+  },
+  "now_playing": {
+    "title": "Now Playing"
+  },
+  "music": {
+    "title": "Music"
+  },
+  "chat": {
+    "title": "Chat",
+    "input_label": "Enter chat message",
+    "play": "{{username}} played a song",
+    "join": "{{username}} has joined"
+  },
+  "sign_in": {
+    "title": "Sign in",
+    "continue_with": "Continue with {{name}}",
+    "listen_on": "Listen on {{name}}"
+  },
+  "legal": {
+    "accept_continue_text": "By continuing, you agree to our <0>friendly Privacy Policy</0>, <1>YouTube Terms of Service</1> and/or <2>Spotify Privacy Policy</2> where applicable."
+  },
+  "not_found": {
+    "title": "Not Found",
+    "description": "You hear music in the distance, but nothing can be seen here."
+  },
+  "music_platform": {
+    "youtube": {
+      "name": "YouTube"
+    },
+    "spotify": {
+      "name": "Spotify"
+    }
+  },
+  "common": {
+    "status": {
+      "live": "live"
+    },
+    "time": {
+      "ago": "{{time}} ago",
+      "just_now": "just now"
+    },
+    "navigation": {
+      "go_back": "Go back"
+    },
+    "label": {
+      "search": "Search"
+    },
+    "result": {
+      "search_empty": "Cannot not find anything here. Let's try something different!"
+    },
+    "input": {
+      "max_x_characters": "Max {{max}} characters"
+    },
+    "action": {
+      "cancel": "Cancel",
+      "confirm": "Confirm"
+    }
+  }
+}

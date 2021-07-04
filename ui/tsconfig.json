@@ -1,0 +1,41 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
+    "module": "ESNext",
+    "target": "ESNext",
+    "jsx": "react-jsx",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "composite": true,
+    "paths": {
+      "@auralous/ui/*": ["./src/*"],
+      "@fluentui/react-context-selector": [
+        "../app/node_modules/@fluentui/react-context-selector"
+      ],
+      "react": ["../app/node_modules/@types/react"],
+      "react/*": ["../app/node_modules/@types/react/*"],
+      "react-hook-form": ["../app/node_modules/react-hook-form"],
+      "react-i18next": ["../app/node_modules/react-i18next"],
+      "react-native": ["../app/node_modules/@types/react-native"],
+      "react-native-gesture-handler": [
+        "../app/node_modules/react-native-gesture-handler"
+      ],
+      "react-native-reanimated": [
+        "../app/node_modules/react-native-reanimated"
+      ],
+      "react-native-svg": ["../app/node_modules/react-native-svg"]
+    }
+  },
+  "references": [
+    {
+      "path": "../api"
+    },
+    {
+      "path": "../player"
+    }
+  ],
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}

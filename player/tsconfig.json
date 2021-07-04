@@ -1,0 +1,27 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
+    "module": "ESNext",
+    "target": "ESNext",
+    "jsx": "react-jsx",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "composite": true,
+    "paths": {
+      "@fluentui/react-context-selector": [
+        "../app/node_modules/@fluentui/react-context-selector"
+      ],
+      "react": ["../app/node_modules/@types/react"],
+      "react/*": ["../app/node_modules/@types/react/*"]
+    }
+  },
+  "references": [
+    {
+      "path": "../api"
+    }
+  ],
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}

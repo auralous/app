@@ -1,0 +1,56 @@
+fragment PlaylistParts on Playlist {
+  id
+  platform
+  externalId
+  name
+  image
+  url
+  total
+  __typename
+}
+
+query playlist($id: ID!) {
+  playlist(id: $id) {
+    ...PlaylistParts
+  }
+}
+
+query myPlaylists {
+  myPlaylists {
+    ...PlaylistParts
+  }
+}
+
+query playlistTracks($id: ID!) {
+  playlistTracks(id: $id) {
+    ...TrackParts
+  }
+}
+
+query playlistsFeatured {
+  playlistsFeatured {
+    ...PlaylistParts
+  }
+}
+
+query playlistsFriends {
+  playlistsFriends {
+    ...PlaylistParts
+  }
+}
+
+query playlistsSearch($query: String!) {
+  playlistsSearch(query: $query) {
+    ...PlaylistParts
+  }
+}
+
+mutation playlistAddTracks($id: ID!, $trackIds: [String!]!) {
+  playlistAddTracks(id: $id, trackIds: $trackIds)
+}
+
+mutation playlistCreate($name: String!, $trackIds: [String!]!) {
+  playlistCreate(name: $name, trackIds: $trackIds) {
+    ...PlaylistParts
+  }
+}

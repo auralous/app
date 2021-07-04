@@ -1,0 +1,21 @@
+schema: ../../api/src/graphql/*/*.graphql
+documents: "./schema/*.graphql"
+generates:
+  ./src/gql.gen.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-urql
+      - typescript-urql-graphcache
+    config:
+      # immutableTypes: true
+      withComponent: false
+      withHooks: true
+      documentMode: "documentNode"
+      nonOptionalTypename: true
+      skipTypeNameForRoot: true
+  ./src/introspection.gen.ts:
+    plugins:
+      - urql-introspection
+    config:
+      useTypeImports: true

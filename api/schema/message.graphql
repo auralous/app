@@ -1,0 +1,28 @@
+fragment MessageParts on Message {
+  id
+  creatorId
+  creator {
+    id
+    username
+    profilePicture
+  }
+  createdAt
+  text
+  type
+}
+
+query messages($id: ID!, $offset: Int, $limit: Int) {
+  messages(id: $id, offset: $offset, limit: $limit) {
+    ...MessageParts
+  }
+}
+
+mutation messageAdd($id: ID!, $text: String!) {
+  messageAdd(id: $id, text: $text)
+}
+
+subscription messageAdded($id: ID!) {
+  messageAdded(id: $id) {
+    ...MessageParts
+  }
+}

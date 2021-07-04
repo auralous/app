@@ -1,0 +1,47 @@
+fragment NowPlayingQueueParts on NowPlayingQueueItem {
+  uid
+  trackId
+  playedAt
+  endedAt
+  creatorId
+}
+
+query nowPlaying($id: ID!) {
+  nowPlaying(id: $id) {
+    id
+    currentTrack {
+      ...NowPlayingQueueParts
+    }
+  }
+}
+
+mutation nowPlayingSkip($id: ID!) {
+  nowPlayingSkip(id: $id)
+}
+
+subscription onNowPlayingUpdated($id: ID!) {
+  nowPlayingUpdated(id: $id) {
+    id
+    currentTrack {
+      ...NowPlayingQueueParts
+    }
+  }
+}
+
+query nowPlayingReactions($id: ID!) {
+  nowPlayingReactions(id: $id) {
+    reaction
+    userId
+  }
+}
+
+subscription nowPlayingReactionsUpdated($id: ID!) {
+  nowPlayingReactionsUpdated(id: $id) {
+    reaction
+    userId
+  }
+}
+
+mutation nowPlayingReact($id: ID!, $reaction: NowPlayingReactionType!) {
+  nowPlayingReact(id: $id, reaction: $reaction)
+}

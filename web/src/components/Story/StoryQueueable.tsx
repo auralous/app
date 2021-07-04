@@ -24,10 +24,8 @@ import { CONFIG } from "utils/constants";
 const StoryQueueableAdder: React.FC<{ story: Story }> = ({ story }) => {
   const { t } = useI18n();
   const client = useClient();
-  const [
-    { fetching },
-    changeStoryQueueable,
-  ] = useStoryChangeQueueableMutation();
+  const [{ fetching }, changeStoryQueueable] =
+    useStoryChangeQueueableMutation();
   const onUserAdd = useCallback(
     async (ev: React.FormEvent<HTMLFormElement>) => {
       ev.preventDefault();
@@ -101,10 +99,8 @@ const StoryQueueableUser: React.FC<{ userId: string; storyId: string }> = ({
   storyId,
 }) => {
   const { t } = useI18n();
-  const [
-    { fetching },
-    changeStoryQueueable,
-  ] = useStoryChangeQueueableMutation();
+  const [{ fetching }, changeStoryQueueable] =
+    useStoryChangeQueueableMutation();
   const [{ data: { user } = { user: undefined } }] = useUserQuery({
     variables: { id: userId },
   });

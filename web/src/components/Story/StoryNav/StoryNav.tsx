@@ -133,14 +133,13 @@ const StoryNavListeners: React.FC<{
 
   const me = useMe();
 
-  const [
-    { data: { storyUsers } = { storyUsers: undefined }, fetching },
-  ] = useStoryUsersQuery({
-    variables: {
-      id: story.id,
-    },
-    pause: !me,
-  });
+  const [{ data: { storyUsers } = { storyUsers: undefined }, fetching }] =
+    useStoryUsersQuery({
+      variables: {
+        id: story.id,
+      },
+      pause: !me,
+    });
 
   const [, login] = useLogin();
 

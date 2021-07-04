@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "allowJs": false,
+    "esModuleInterop": true,
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true
+  }
+}

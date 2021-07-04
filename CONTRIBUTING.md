@@ -32,18 +32,18 @@ The steps to submit a PR are:
 
 1. [Fork](https://help.github.com/articles/fork-a-repo/) this repository to your own GitHub account and then [clone](https://help.github.com/articles/cloning-a-repository/) it to your local device.
 
-2. Install all dependencies and dev dependencies by `npm i`.
+2. Install all dependencies and dev dependencies by `yarn`.
 
 3. Make changes and commit. Use the present tense and imperative mood ("Add feature" instead of "Adds feature" or "Added feature").
 
-4. Make sure your code is linted by running `npm run lint -- --fix`.
+4. Make sure your code is linted by running `yarn lint -- --fix`.
 
 5. If a change is not documentation-related, please add a tests if possible.
 
 6. Build and run tests
 
 ```bash
-npm run build
+yarn build
 npm test
 ```
 

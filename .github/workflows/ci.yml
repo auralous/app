@@ -2,13 +2,12 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -16,15 +15,15 @@ jobs:
         node-version: [14]
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm i
-    - name: Lint
-      run: npm run lint
-    - name: Build
-      run: npm run build
-      env:
-        SENTRY_DSN: https://foo@bar.ingest.sentry.io/0
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: yarn
+      - name: Lint
+        run: yarn lint
+      - name: Build
+        run: yarn build
+        env:
+          SENTRY_DSN: https://foo@bar.ingest.sentry.io/0

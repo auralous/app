@@ -1,0 +1,41 @@
+fragment ArtistParts on Artist {
+  id
+  platform
+  externalId
+  name
+  image
+  url
+}
+
+fragment TrackParts on Track {
+  id
+  platform
+  externalId
+  title
+  duration
+  image
+  url
+  artists {
+    ...ArtistParts
+  }
+}
+
+query track($id: ID!) {
+  track(id: $id) {
+    ...TrackParts
+  }
+}
+
+query crossTracks($id: ID!) {
+  crossTracks(id: $id) {
+    id
+    youtube
+    spotify
+  }
+}
+
+query searchTrack($query: String!) {
+  searchTrack(query: $query) {
+    ...TrackParts
+  }
+}
